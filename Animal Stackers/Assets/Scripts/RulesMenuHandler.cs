@@ -13,7 +13,7 @@ public class RulesMenuHandler : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		//inistialize buttons
+		//initialize buttons
 		playButton.GetComponent<Button>().onClick.AddListener(PlayClick);
 	}
 	

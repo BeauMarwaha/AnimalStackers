@@ -11,6 +11,7 @@ public class Piece : MonoBehaviour {
     private Vector3 startingUp;
     private bool landed = false;
     private CameraControl cameraControl;
+    private int lives;
     public bool Landed
     {
         get { return landed; }
@@ -21,12 +22,12 @@ public class Piece : MonoBehaviour {
         pieces = GameObject.FindGameObjectWithTag("Game Board").GetComponent<BoardManager>().pieces;
         fallRate = 1.5f;
         startingUp = gameObject.transform.up;
-        cameraControl = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraControl>(); ;
-	}
+        cameraControl = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraControl>();
+        lives = GameObject.Find("LossPlane").GetComponent<LossPlane>().lives;
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        
         if (!landed)
         {
             
@@ -90,20 +91,29 @@ public class Piece : MonoBehaviour {
     }
     void OnCollisionEnter(Collision col)
     {
-
-        if ((col.gameObject.tag == "Game Board" || col.gameObject.tag == "Piece") && !landed)
-        {
+        
+       if ((col.gameObject.tag == "Game Board" || col.gameObject.tag == "Piece") && !landed)
+       {
             cameraControl.GetTallestPiece(false);
             landed = true;
             gameObject.GetComponent<Rigidbody>().useGravity = true;
-            Instantiate(pieces[Random.Range(0, pieces.Count)], spawnPoint.transform.position, spawnPoint.transform.rotation);
+            if (GameObject.Find("LossPlane").GetComponent<LossPlane>().lives > 0)
+            {
+                        Instantiate(pieces[Random.Range(0, pieces.Count)], spawnPoint.transform.position, spawnPoint.transform.rotation);
+            }
         }
+        
+        
     }
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.name == "LossPlane" && !landed)
+        if(GameObject.Find("LossPlane").GetComponent<LossPlane>().lives > 0)
         {
-            Instantiate(pieces[Random.Range(0, pieces.Count)], spawnPoint.transform.position, spawnPoint.transform.rotation);
+            if (col.gameObject.name == "LossPlane" && !landed)
+            {
+                Instantiate(pieces[Random.Range(0, pieces.Count)], spawnPoint.transform.position, spawnPoint.transform.rotation);
+            }
         }
+
     }
 }

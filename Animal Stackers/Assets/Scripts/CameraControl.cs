@@ -8,6 +8,7 @@ public class CameraControl : MonoBehaviour {
     private float radius;
     private float angle;
     private float prevIncrement = 0;
+    private float startLoc;
 	// Use this for initialization
 	void Start () {
         //center = GameObject.FindGameObjectWithTag("Game Board");
@@ -45,8 +46,8 @@ public class CameraControl : MonoBehaviour {
             }
         }else
         {
-                gameObject.transform.position = new Vector3(gameObject.transform.position.x, increment, gameObject.transform.position.z);
-                center.transform.position = new Vector3(0, increment, 0);
+                gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - (prevIncrement - increment), gameObject.transform.position.z);
+                center.transform.position = new Vector3(0, center.transform.position.y - (prevIncrement - increment), 0);
                 prevIncrement = increment;
         }
         

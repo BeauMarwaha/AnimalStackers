@@ -41,7 +41,7 @@ public class LossPlane : MonoBehaviour {
 	//if a piece falls down out of the world lose a life
     void OnTriggerEnter(Collider piece)
     {
-        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraControl>().GetTallestPiece(true);
+        //GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraControl>().GetTallestPiece(true);
         lives--;
         Destroy(piece.gameObject);
 

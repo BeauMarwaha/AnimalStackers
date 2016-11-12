@@ -90,15 +90,20 @@ public class Piece : MonoBehaviour {
     }
     void OnCollisionEnter(Collision col)
     {
+
         if ((col.gameObject.tag == "Game Board" || col.gameObject.tag == "Piece") && !landed)
         {
             cameraControl.GetTallestPiece(false);
             landed = true;
-            //gameObject.transform.SetParent(null);
-            //landingPosition = gameObject.transform.position;
             gameObject.GetComponent<Rigidbody>().useGravity = true;
             Instantiate(pieces[Random.Range(0, pieces.Count)], spawnPoint.transform.position, spawnPoint.transform.rotation);
-            //Destroy(this);
+        }
+    }
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.name == "LossPlane" && !landed)
+        {
+            Instantiate(pieces[Random.Range(0, pieces.Count)], spawnPoint.transform.position, spawnPoint.transform.rotation);
         }
     }
 }

@@ -1,21 +1,27 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 //Author James Troup
+// Used to control piece as it falls
 public class Piece : MonoBehaviour {
     private Vector3 landingPosition;
     private float fallRate;
 
     private GameObject spawnPoint;
     private List<GameObject> pieces;
+    private Vector3 startingUp;
     private bool landed = false;
-    // Used to control piece as it falls
+    private CameraControl cameraControl;
+    public bool Landed
+    {
+        get { return landed; }
+    }
 	// Use this for initialization
 	void Start () {
         spawnPoint = GameObject.Find("SpawnPoint");
         pieces = GameObject.FindGameObjectWithTag("Game Board").GetComponent<BoardManager>().pieces;
-        //gameObject.transform.SetParent(GameObject.FindGameObjectWithTag("Game Board").transform);
-        //rotation = gameObject.transform.forward;
-        fallRate = 3;
+        fallRate = 1.5f;
+        startingUp = gameObject.transform.up;
+        cameraControl = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraControl>(); ;
 	}
 	
 	// Update is called once per frame
@@ -23,15 +29,43 @@ public class Piece : MonoBehaviour {
         
         if (!landed)
         {
-            MovePiece();
-            if (Input.GetKeyDown(KeyCode.DownArrow)){
-                fallRate = 6;
-            }
-            if (Input.GetKeyUp(KeyCode.DownArrow))
+            
+            if (!Input.GetKey(KeyCode.LeftShift))
             {
-                fallRate = 3;
+                MovePiece();
+                if (Input.GetKeyDown(KeyCode.DownArrow))
+                {
+                    fallRate = 3f;
+                }
+                
+                if (Input.GetKeyDown(KeyCode.UpArrow))
+                {
+                    fallRate = .75f;
+                }
+                if (Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.UpArrow))
+                {
+                    fallRate = 1.5f;
+                }
             }
-            gameObject.transform.position += -gameObject.transform.up * fallRate * Time.deltaTime;
+            if ((Input.GetKey(KeyCode.LeftShift) && (Input.GetKeyDown(KeyCode.D))))
+            {
+                transform.Rotate(0, -90, 0);             
+            }
+            if (Input.GetKey(KeyCode.LeftShift) && (Input.GetKeyDown(KeyCode.A)))
+            {
+                transform.Rotate(0, 90, 0);
+            }
+            if (Input.GetKey(KeyCode.LeftShift) && (Input.GetKeyDown(KeyCode.W)))
+            {
+
+                transform.Rotate(-90, 0, 0);
+            }
+            if (Input.GetKey(KeyCode.LeftShift) && (Input.GetKeyDown(KeyCode.S)))
+            {
+                transform.Rotate(90, 0, 0);
+            }
+
+            gameObject.transform.position += -startingUp * fallRate * Time.deltaTime;
         }
     }
     void MovePiece()
@@ -58,9 +92,9 @@ public class Piece : MonoBehaviour {
     {
         if ((col.gameObject.tag == "Game Board" || col.gameObject.tag == "Piece") && !landed)
         {
+            cameraControl.GetTallestPiece(false);
             landed = true;
             //gameObject.transform.SetParent(null);
-            Debug.Log("Landed");
             //landingPosition = gameObject.transform.position;
             gameObject.GetComponent<Rigidbody>().useGravity = true;
             Instantiate(pieces[Random.Range(0, pieces.Count)], spawnPoint.transform.position, spawnPoint.transform.rotation);

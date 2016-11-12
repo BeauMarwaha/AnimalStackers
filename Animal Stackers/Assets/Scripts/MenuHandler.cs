@@ -16,7 +16,7 @@ public class MenuHandler : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		//inistialize buttons
+		//initialize buttons
 		playButton.GetComponent<Button>().onClick.AddListener(PlayClick);
 		
 		controlsButton.GetComponent<Button>().onClick.AddListener(ControlsClick);

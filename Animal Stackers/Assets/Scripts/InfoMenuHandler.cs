@@ -13,7 +13,7 @@ public class InfoMenuHandler : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		//inistialize buttons
+		//initialize buttons
 		exitButton.GetComponent<Button>().onClick.AddListener(ExitClick);
 	}
 	

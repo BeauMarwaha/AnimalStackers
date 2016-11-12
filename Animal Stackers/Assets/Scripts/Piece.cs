@@ -99,7 +99,8 @@ public class Piece : MonoBehaviour {
             gameObject.GetComponent<Rigidbody>().useGravity = true;
             if (GameObject.Find("LossPlane").GetComponent<LossPlane>().lives > 0)
             {
-                        Instantiate(pieces[Random.Range(0, pieces.Count)], spawnPoint.transform.position, spawnPoint.transform.rotation);
+                GameObject.Find("Score").GetComponent<Score>().score += 10;        
+                Instantiate(pieces[Random.Range(0, pieces.Count)], spawnPoint.transform.position, spawnPoint.transform.rotation);
             }
         }
         

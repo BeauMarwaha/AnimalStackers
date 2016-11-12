@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 /// <summary>
 /// Author: Beau Marwaha
@@ -9,9 +9,10 @@ public class BoardManager : MonoBehaviour {
 
 	//attributes
 	public float rotation;
-
+    public List<GameObject> pieces = new List<GameObject>();
 	private GameObject gameBoard;
 
+    
 	// Use this for initialization
 	void Start () {
 		//initialize attributes
@@ -21,17 +22,17 @@ public class BoardManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		//reset rotation
-		rotation = 0;
+		////reset rotation
+		//rotation = 0;
 
-		//check for user input for board rotation
-		if (Input.GetKey (KeyCode.LeftArrow)) {
-			rotation = 1.5f;
-		} else if (Input.GetKey (KeyCode.RightArrow)) {
-			rotation = -1.5f;
-		}
+		////check for user input for board rotation
+		//if (Input.GetKey (KeyCode.LeftArrow)) {
+		//	rotation = 1.5f;
+		//} else if (Input.GetKey (KeyCode.RightArrow)) {
+		//	rotation = -1.5f;
+		//}
 
-		UpdateRotation ();
+		//UpdateRotation ();
 	}
 
 	/// <summary>

@@ -15,7 +15,7 @@ public class LossPlane : MonoBehaviour {
 	}
     void OnTriggerEnter(Collider piece)
     {
-        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraControl>().GetTallestPiece(true);
+        //GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraControl>().GetTallestPiece(true);
         lives--;
         Destroy(piece.gameObject);
     }

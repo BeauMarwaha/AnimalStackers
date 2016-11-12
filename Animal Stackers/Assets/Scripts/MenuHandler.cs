@@ -10,7 +10,7 @@ public class MenuHandler : MonoBehaviour {
 
 	//attributes
 	public Button playButton;
-	public Button rulesButton;
+	public Button controlsButton;
 	public Button creditsButton;
 	public Button exitButton;
 	
@@ -19,7 +19,7 @@ public class MenuHandler : MonoBehaviour {
 		//inistialize buttons
 		playButton.GetComponent<Button>().onClick.AddListener(PlayClick);
 		
-		rulesButton.GetComponent<Button>().onClick.AddListener(RulesClick);
+		controlsButton.GetComponent<Button>().onClick.AddListener(ControlsClick);
 
 		creditsButton.GetComponent<Button>().onClick.AddListener(CreditsClick);
 
@@ -27,17 +27,17 @@ public class MenuHandler : MonoBehaviour {
 	}
 	
 	/// <summary>
-	/// Starts the game on play button click.
+	/// Goes to rules on play button click.
 	/// </summary>
 	void PlayClick(){
-		Application.LoadLevel ("Animal Stackers"); 
+		Application.LoadLevel ("Rules Menu"); 
 	}
 
 	/// <summary>
-	/// Goes to the Rules menu on button click.
+	/// Goes to the Controls menu on button click.
 	/// </summary>
-	void RulesClick(){
-		Application.LoadLevel ("Rules Menu"); 
+	void ControlsClick(){
+		Application.LoadLevel ("Controls Menu"); 
 	}
 
 	/// <summary>

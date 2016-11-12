@@ -46,9 +46,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\BoardManager.cs" />
+     <Compile Include="Assets\Scripts\CameraControl.cs" />
      <Compile Include="Assets\Scripts\InfoMenuHandler.cs" />
      <Compile Include="Assets\Scripts\MenuHandler.cs" />
      <Compile Include="Assets\Scripts\Piece.cs" />
+     <Compile Include="Assets\Scripts\RulesMenuHandler.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

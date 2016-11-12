@@ -11,8 +11,9 @@ public class LossPlane : MonoBehaviour {
 	//attributes
     public int lives = 15;
     public Text lifeText;
-	public GameObject LoseMenu;
+	public bool lose = false;
 
+	public GameObject LoseMenu;
 	public Button restartButton;
 	public Button menuButton;
 	public Button exitButton;
@@ -30,6 +31,11 @@ public class LossPlane : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         lifeText.text = "Lives: " + lives;
+
+		//rotate camera on loss
+		if (lose) {
+			GameObject.Find("Main Camera").GetComponent<CameraControl>().GameOverRotate();
+		}
 	}
 
 	//if a piece falls down out of the world lose a life
@@ -51,6 +57,9 @@ public class LossPlane : MonoBehaviour {
 	/// </summary>
 	void EndGame(){
 		LoseMenu.SetActive (true);
+
+		//start camera rotation
+		lose = true;
 	}
 
 	/// <summary>

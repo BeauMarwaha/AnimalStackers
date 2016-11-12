@@ -74,4 +74,37 @@ public class CameraControl : MonoBehaviour {
         }
         CameraHeight(position,fall);
     }
+
+	/// <summary>
+	/// Rotates the screen automatically on game over
+	/// </summary>
+	public void GameOverRotate(){
+		MoveCamera(10f * Time.deltaTime);
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

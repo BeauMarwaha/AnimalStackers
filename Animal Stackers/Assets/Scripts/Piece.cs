@@ -1,8 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
-//Author James Troup
-// Used to control piece as it falls
+
+/// <summary>
+/// Author: James Troup
+/// Used to control a piece as it falls
+/// </summary>
 public class Piece : MonoBehaviour {
+
+	//attributes
     private Vector3 landingPosition;
     private float fallRate;
 
@@ -12,10 +17,16 @@ public class Piece : MonoBehaviour {
     private bool landed = false;
     private CameraControl cameraControl;
     private int lives;
+
+	/// <summary>
+	/// Gets a value indicating whether this <see cref="Piece"/> is landed.
+	/// </summary>
+	/// <value><c>true</c> if landed; otherwise, <c>false</c>.</value>
     public bool Landed
     {
         get { return landed; }
     }
+
 	// Use this for initialization
 	void Start () {
         spawnPoint = GameObject.Find("SpawnPoint");
@@ -69,6 +80,10 @@ public class Piece : MonoBehaviour {
             gameObject.transform.position += -startingUp * fallRate * Time.deltaTime;
         }
     }
+
+	/// <summary>
+	/// Moves the piece.
+	/// </summary>
     void MovePiece()
     {
         if (Input.GetKey(KeyCode.A))
@@ -89,6 +104,11 @@ public class Piece : MonoBehaviour {
         }
         
     }
+
+	/// <summary>
+	/// Raises the collision enter event.
+	/// </summary>
+	/// <param name="col">Col.</param>
     void OnCollisionEnter(Collision col)
     {
         
@@ -106,6 +126,11 @@ public class Piece : MonoBehaviour {
         
         
     }
+
+	/// <summary>
+	/// Raises the trigger enter event.
+	/// </summary>
+	/// <param name="col">Col.</param>
     void OnTriggerEnter(Collider col)
     {
         if(GameObject.Find("LossPlane").GetComponent<LossPlane>().lives > 0)

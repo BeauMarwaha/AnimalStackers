@@ -1,7 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Authors: Beau Marwaha, James Troup
+/// Camera control.
+/// </summary>
 public class CameraControl : MonoBehaviour {
+
+	//attributes
     private GameObject center;
 
     private Vector3 vecToCenter;
@@ -9,6 +15,7 @@ public class CameraControl : MonoBehaviour {
     private float angle;
     private float prevIncrement = 0;
     private float startLoc;
+
 	// Use this for initialization
 	void Start () {
         //center = GameObject.FindGameObjectWithTag("Game Board");
@@ -34,6 +41,12 @@ public class CameraControl : MonoBehaviour {
 
 
     }
+
+	/// <summary>
+	/// Handles camera height
+	/// </summary>
+	/// <param name="increment">Increment.</param>
+	/// <param name="fall">If set to <c>true</c> fall.</param>
     void CameraHeight(float increment,bool fall)
     {
         if (!fall)
@@ -53,6 +66,11 @@ public class CameraControl : MonoBehaviour {
         
         gameObject.transform.LookAt(center.transform);
     }
+
+	/// <summary>
+	/// Moves the camera.
+	/// </summary>
+	/// <param name="a">The alpha component.</param>
     void MoveCamera(float a)
     {
         //Debug.Log(increment);
@@ -63,6 +81,11 @@ public class CameraControl : MonoBehaviour {
        
         gameObject.transform.LookAt(center.transform);
     }
+
+	/// <summary>
+	/// Gets the tallest piece in the stack.
+	/// </summary>
+	/// <param name="fall">If set to <c>true</c> fall.</param>
     public void GetTallestPiece(bool fall)
     {
         float position = 0;

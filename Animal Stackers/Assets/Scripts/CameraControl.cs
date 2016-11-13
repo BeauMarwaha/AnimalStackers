@@ -18,7 +18,6 @@ public class CameraControl : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        //center = GameObject.FindGameObjectWithTag("Game Board");
         center = GameObject.Find("CameraFollow");
         vecToCenter = gameObject.transform.position + center.transform.position ;
         radius = vecToCenter.magnitude;
@@ -32,14 +31,9 @@ public class CameraControl : MonoBehaviour {
         if (Input.GetKey(KeyCode.LeftArrow))
         {           
             MoveCamera(-75f * Time.deltaTime);
-        }else if(Input.GetKey(KeyCode.RightArrow))
-        {
-            //gameObject.transform.LookAt(center.transform);
+		}else if(Input.GetKey(KeyCode.RightArrow)){
             MoveCamera(75f * Time.deltaTime);
         }
-        
-
-
     }
 
 	/// <summary>
@@ -73,7 +67,6 @@ public class CameraControl : MonoBehaviour {
 	/// <param name="a">The alpha component.</param>
     void MoveCamera(float a)
     {
-        //Debug.Log(increment);
         gameObject.transform.LookAt(center.transform);
         angle += a;
 

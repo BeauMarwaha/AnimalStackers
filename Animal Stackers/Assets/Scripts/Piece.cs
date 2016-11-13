@@ -16,7 +16,6 @@ public class Piece : MonoBehaviour {
     private Vector3 startingUp;
     private bool landed = false;
     private CameraControl cameraControl;
-    private int lives;
 
 	/// <summary>
 	/// Gets a value indicating whether this <see cref="Piece"/> is landed.
@@ -34,7 +33,6 @@ public class Piece : MonoBehaviour {
         fallRate = 1.5f;
         startingUp = gameObject.transform.up;
         cameraControl = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraControl>();
-        lives = GameObject.Find("LossPlane").GetComponent<LossPlane>().lives;
     }
 	
 	// Update is called once per frame

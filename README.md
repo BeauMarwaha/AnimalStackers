@@ -7,8 +7,8 @@
   
   Broken Logic Games
   
-  Programmer - Beau Marwaha
+  UI Programmer - Beau Marwaha
   
-  Programmer - James Troup
+  Lead Programmer - James Troup
   
   Artist - Emily Haldeman

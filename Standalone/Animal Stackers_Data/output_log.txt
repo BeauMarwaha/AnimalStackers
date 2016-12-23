@@ -1,0 +1,96 @@
+Initialize engine version: 5.2.5f1 (ad2d0368e248)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 980M (ID=0x1617)
+    Vendor:   NVIDIA
+    VRAM:     3072 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\beaum\Desktop\GitHub Projects\AnimalStackers\Standalone\Animal Stackers_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\beaum\Desktop\GitHub Projects\AnimalStackers\Standalone\Animal Stackers_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\beaum\Desktop\GitHub Projects\AnimalStackers\Standalone\Animal Stackers_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\beaum\Desktop\GitHub Projects\AnimalStackers\Standalone\Animal Stackers_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\beaum\Desktop\GitHub Projects\AnimalStackers\Standalone\Animal Stackers_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\beaum\Desktop\GitHub Projects\AnimalStackers\Standalone\Animal Stackers_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\beaum\Desktop\GitHub Projects\AnimalStackers\Standalone\Animal Stackers_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\beaum\Desktop\GitHub Projects\AnimalStackers\Standalone\Animal Stackers_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\beaum\Desktop\GitHub Projects\AnimalStackers\Standalone\Animal Stackers_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\beaum\Desktop\GitHub Projects\AnimalStackers\Standalone\Animal Stackers_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\beaum\Desktop\GitHub Projects\AnimalStackers\Standalone\Animal Stackers_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\beaum\Desktop\GitHub Projects\AnimalStackers\Standalone\Animal Stackers_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\beaum\Desktop\GitHub Projects\AnimalStackers\Standalone\Animal Stackers_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.049 seconds
+desktop: 1920x1080 60Hz; virtual: 3456x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\beaum\Desktop\GitHub Projects\AnimalStackers\Standalone\Animal Stackers_Data\Managed\System.dll (this message is harmless)
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 47d4 -> priority: 1 
+  Thread -> id: 1e58 -> priority: 1 
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.658425 ms
+
+Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 277.
+Total: 0.265816 ms (FindLiveObjects: 0.034737 ms CreateObjectMapping: 0.014725 ms MarkObjects: 0.156696 ms  DeleteObjects: 0.059280 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.611680 ms
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 397.
+Total: 0.282430 ms (FindLiveObjects: 0.058147 ms CreateObjectMapping: 0.012837 ms MarkObjects: 0.200117 ms  DeleteObjects: 0.010949 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.453852 ms
+
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 286.
+Total: 0.259397 ms (FindLiveObjects: 0.015858 ms CreateObjectMapping: 0.010949 ms MarkObjects: 0.159339 ms  DeleteObjects: 0.055126 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.395704 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 397.
+Total: 0.239008 ms (FindLiveObjects: 0.018123 ms CreateObjectMapping: 0.012837 ms MarkObjects: 0.201628 ms  DeleteObjects: 0.006041 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.436483 ms
+
+Unloading 43 unused Assets to reduce memory usage. Loaded Objects now: 277.
+Total: 0.386642 ms (FindLiveObjects: 0.042666 ms CreateObjectMapping: 0.015858 ms MarkObjects: 0.230324 ms  DeleteObjects: 0.097793 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.362099 ms
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 397.
+Total: 0.351905 ms (FindLiveObjects: 0.047575 ms CreateObjectMapping: 0.028696 ms MarkObjects: 0.263551 ms  DeleteObjects: 0.011327 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.338689 ms
+
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 286.
+Total: 0.293380 ms (FindLiveObjects: 0.030584 ms CreateObjectMapping: 0.011327 ms MarkObjects: 0.165757 ms  DeleteObjects: 0.085333 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.383999 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 397.
+Total: 0.274501 ms (FindLiveObjects: 0.023410 ms CreateObjectMapping: 0.013215 ms MarkObjects: 0.230324 ms  DeleteObjects: 0.007174 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.420247 ms
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 316.
+Total: 0.300931 ms (FindLiveObjects: 0.032094 ms CreateObjectMapping: 0.011327 ms MarkObjects: 0.175575 ms  DeleteObjects: 0.081557 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.359834 ms
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 509.
+Total: 0.249580 ms (FindLiveObjects: 0.042289 ms CreateObjectMapping: 0.015858 ms MarkObjects: 0.183504 ms  DeleteObjects: 0.007174 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.668317 ms
+
+Unloading 235 unused Assets to reduce memory usage. Loaded Objects now: 400.
+Total: 0.339822 ms (FindLiveObjects: 0.064943 ms CreateObjectMapping: 0.038135 ms MarkObjects: 0.203516 ms  DeleteObjects: 0.032471 ms)
+
